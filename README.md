@@ -119,7 +119,7 @@ docker run -it -d --name=squash-tm \
 --link squash-tm-pg:postgres \
 --restart=always \
 -p 32760:8080 \
-fjudith/squash-tm
+squashtest/squash-tm
 ```
 
 Wait 2-3 minutes the time for Squash-TM to initialize. then login to http://localhost:32760/squash-tm
@@ -142,7 +142,7 @@ sleep 10
 docker run -it -d --name=squash-tm \
 --link squash-tm-md:mysql \
 -p 32760:8080 \
-fjudith/squash-tm
+squashtest/squash-tm
 ```
 
 Wait 2-3 minutes the time for Squash-TM to initialize. then login to http://localhost:32760/squash-tm
@@ -168,7 +168,7 @@ squash-tm:
     REVERSE_PROXY_PROTOCOL: https
   ports:
   - 32760:8080/tcp
-  image: fjudith/squash-tm
+  image: squashtest/squash-tm
   links:
   - squash-tm-pg:postgres
   volumes:
@@ -185,12 +185,12 @@ squash-tm:
 ```
 ---
 applications:
-- name: squashtm
+- name: squash-tm
   docker:
-    image: fjudith/squash-tm
+    image: squashtest/squash-tm
   instances: 1
-  memory: 1G
-  disk_quota: 1G
+  memory: 2G
+  disk_quota: 2G
   env: 
     DB_HOST: <database-service-host>
     DB_PORT: <database-service-port>
