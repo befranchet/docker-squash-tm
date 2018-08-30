@@ -192,6 +192,7 @@ applications:
   memory: 2G
   disk_quota: 2G
   env: 
+    USER_LANGUAGE: en
     DB_HOST: <database-service-host>
     DB_PORT: <database-service-port>
     DB_TYPE: <database-type>
