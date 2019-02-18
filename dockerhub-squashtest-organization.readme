@@ -1,0 +1,9 @@
+Hi
+I'm developer on the squashtest project (https://www.squashtest.org/en).
+We've planned to publish our official docker image on dockerhub, but the "squahstest" organization 
+is already created and this github repository (squashtest-shadow/docker-squash-tm) is linked to it.
+That's why I suppose one of the commiters on this repository own the "squashtest" organization on docker Hub.
+Is there any possibilities that this one give us the "squashtest" repository and so add user befranchet to the
+owners group on "squashtest" organizations ?
+
+Regards
